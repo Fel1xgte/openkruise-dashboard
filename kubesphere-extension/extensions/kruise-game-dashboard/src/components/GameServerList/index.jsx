@@ -137,30 +137,6 @@ function GameServerList(props) {
                 ),
             },
             {
-                title: t('opsState'),
-                field: "opsState", // 默认当作筛选参数
-                searchable: true, // 搜索
-                sortable: true, // 排序
-                canHide: true, // 隐藏
-                render: (value, record) => (
-                    <>
-                        <Field value={value}/>
-                    </>
-                ),
-            },
-            {
-                title: t('networkState'),
-                field: "networkState", // 默认当作筛选参数
-                searchable: true, // 搜索
-                sortable: true, // 排序
-                canHide: true, // 隐藏
-                render: (value, record) => (
-                    <>
-                        <Field value={value}/>
-                    </>
-                ),
-            },
-            {
                 title: t('images'),
                 field: "images", // 默认当作筛选参数
                 searchable: true, // 搜索
@@ -195,30 +171,6 @@ function GameServerList(props) {
                                 />
                             )
                         })}
-                    </>
-                ),
-            },
-            {
-                title: t('DP'),
-                field: "DP", // 默认当作筛选参数
-                searchable: true, // 搜索
-                sortable: true, // 排序
-                canHide: true, // 隐藏
-                render: (value, record) => (
-                    <>
-                        <Field value={value}/>
-                    </>
-                ),
-            },
-            {
-                title: t('UP'),
-                field: "UP", // 默认当作筛选参数
-                searchable: true, // 搜索
-                sortable: true, // 排序
-                canHide: true, // 隐藏
-                render: (value, record) => (
-                    <>
-                        <Field value={value}/>
                     </>
                 ),
             },
@@ -384,8 +336,7 @@ function GameServerList(props) {
             <Banner
                 className="mb12"
                 icon={<Icon name="appcenter" size={40}/>}
-                title={t("gameservers")}
-                description={t("gameservers_description")}
+                title={t("Pods")}
             />
             <DataTable
                 ref={tableRef}
