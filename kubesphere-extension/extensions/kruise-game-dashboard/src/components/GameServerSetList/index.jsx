@@ -79,14 +79,6 @@ function GameServerSetList(props) {
             ),
         },
         {
-            title: t('maintainingReplicas'),
-            field: "maintainingReplicas", // 默认当作筛选参数
-        },
-        {
-            title: t('waitToBeDeletedReplicas'),
-            field: "waitToBeDeletedReplicas", // 默认当作筛选参数
-        },
-        {
             title: t('templateImages'),
             field: "templateImages", // 默认当作筛选参数
             searchable: true, // 搜索
@@ -284,8 +276,7 @@ function GameServerSetList(props) {
             <Banner
                 className="mb12"
                 icon={<Icon name="appcenter" size={40}/>}
-                title={t("gameserversets")}
-                description={t("gameserversets_description")}
+                title={t("Workloads")}
             />
             <DataTable
                 ref={tableRef}
