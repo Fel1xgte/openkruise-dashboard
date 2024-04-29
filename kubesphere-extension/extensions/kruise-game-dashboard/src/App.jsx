@@ -1,4 +1,4 @@
-import React from 'react';
+=import React from 'react';
 import styled from 'styled-components';
 import {Outlet, useLocation, useNavigate, useParams} from 'react-router-dom';
 import {NavMenu, NavTitle} from '@ks-console/shared';
@@ -40,19 +40,39 @@ export default function App() {
                     name: 'overview',
                     icon: 'human',
                     skipAuth: true,
-                    title: 'overview',
+                    title: 'Overview',
                 },
                 {
                     name: 'gameserversets',
                     icon: 'bird',
                     skipAuth: true,
-                    title: 'gameserversets',
+                    title: 'Workloads',
+                    children: [ // Submenu items
+                        {
+                            name: 'cloneset',
+                            title: 'CloneSet',
+                            icon: 'copy',
+                            skipAuth: true
+                        },
+                        {
+                            name: 'advancedstatefulset',
+                            title: 'Advanced StatefulSet',
+                            icon: 'database',
+                            skipAuth: true
+                        },
+                        {
+                            name: 'advanceddaemonset',
+                            title: 'Advanced DaemonSet',
+                            icon: 'cloud',
+                            skipAuth: true
+                        }
+                    ] 
                 },
                 {
                     name: 'gameservers',
                     icon: 'bird',
                     skipAuth: true,
-                    title: 'gameservers',
+                    title: 'Pods',
                 },
             ],
         },
@@ -74,7 +94,7 @@ export default function App() {
                 <PageSide>
                     <NavTitle
                         icon={<Group variant="light" size={40}/>}
-                        title={t('kruise-game-dashboard')}
+                        title={t('Openkruise-Dashboard')}
                         style={{marginBottom: '20px'}}
                     />
                     <NavMenu navs={navs} pathname={location.pathname} prefix={prefix}/>
