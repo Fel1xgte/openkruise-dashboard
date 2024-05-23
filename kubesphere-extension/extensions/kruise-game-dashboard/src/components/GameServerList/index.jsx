@@ -22,8 +22,8 @@ function GameServerList(props) {
     const tableRef = useRef();
     const clusterId = params.name;
     const gsUrl = '/clusters/' + clusterId + '/kruise-game-dashboard/gameservers';
-    const url = '/clusters/' + clusterId + '/apis/game.kruise.io/v1alpha1/gameservers'
-    const gssDetailUrl = '/clusters/' + clusterId + '/customresources/gameservers.game.kruise.io/resources';
+    const url = '/clusters/' + clusterId + '/apis/apps.kruise.io/v1alpha1/clonesets`'
+    const gssDetailUrl = '/clusters/' + clusterId + '/customresources/clonesets.apps.kruise.io/resources';
 
     const navigate = useNavigate();
     const handleMenuItemClick = () => {
