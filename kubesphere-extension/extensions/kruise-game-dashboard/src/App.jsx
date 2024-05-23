@@ -1,4 +1,4 @@
-=import React from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {Outlet, useLocation, useNavigate, useParams} from 'react-router-dom';
 import {NavMenu, NavTitle} from '@ks-console/shared';
